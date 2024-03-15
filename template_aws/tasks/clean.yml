@@ -1,0 +1,21 @@
+---
+- name: Eliminacion de archivos huerfanos
+  ignore_errors: yes
+  file:
+    path: '{{ dir_mnt }}{{ item.value.path }}/'
+    state: absent
+  loop: '{{ lv | dict2items}}'
+
+- name: Eliminacion de archivos lost+found
+  file:
+    path: '{{ item.value.path }}/lost+found'
+    state: absent
+  loop: '{{ lv | dict2items }}'
+
+- name: Reinicio de sistema operativo
+  reboot:
+
+- name: Eliminacion de carpeta temporal
+  file:
+    path: '{{ dir_mnt }}'
+    state: absent

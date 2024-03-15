@@ -1,0 +1,7 @@
+---
+- name: Crear LV's
+  lvol:
+    lv: '{{ item.key }}'
+    size: '{{ item.value.size }}'
+    vg: '{{ vg_name }}'
+  loop: '{{ lv | dict2items}}'

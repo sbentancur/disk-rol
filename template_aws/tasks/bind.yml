@@ -1,0 +1,8 @@
+---
+- name: Bind de montaje coso
+  ansible.posix.mount:
+    path: '{{ dir_mnt }}'
+    src: /
+    fstype: '{{ fs_type }}'
+    opts: bind
+    state: ephemeral 

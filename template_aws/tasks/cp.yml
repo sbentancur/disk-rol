@@ -1,0 +1,5 @@
+---
+- name: Copiar archivos temporales
+  ignore_errors: yes
+  shell: cp -a '{{dir_mnt}}{{item.value.path}}'/* '{{ item.value.path }}/'
+  loop: '{{ lv | dict2items}}'

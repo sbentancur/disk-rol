@@ -1,0 +1,27 @@
+---
+# vars file for template_aws
+vg_name: vg1 # Nombre del volume group
+device: /dev/sdb # Nombre del disco agregado
+fs_type: ext4 # fs_type para darle formato al nuevo disco
+lv: # Path y tamaño de cada logical volume a crear
+  tmp:
+    path: /tmp
+    src: /dev/mapper/vg1-tmp
+    size: 5G
+  var_tmp:
+    path: /var/tmp
+    src: /dev/mapper/vg1-var_tmp
+    size: 5G
+  var_log:
+    path: /var/log
+    src: /dev/mapper/vg1-var_log
+    size: 10G
+  var_log_audit:
+    path: /var/log/audit
+    src: /dev/mapper/vg1-var_log_audit
+    size: 10G
+  home:
+    path: /home
+    src: /dev/mapper/vg1-home
+    size: 10G
+dir_mnt: /tmp_mnt

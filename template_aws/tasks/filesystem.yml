@@ -1,0 +1,6 @@
+---
+- name: Cambiar fstype de los LV
+  filesystem:
+    fstype: '{{ fs_type }}'
+    dev: '{{ item.value.src }}'
+  loop: '{{ lv | dict2items }}'

@@ -1,0 +1,7 @@
+---
+- name: Creacion de particion ext4 LVM
+  parted:
+    device: '{{ device }}'
+    number: 1
+    state: present
+    fs_type: '{{ fs_type }}'

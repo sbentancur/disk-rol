@@ -1,0 +1,8 @@
+---
+- name: Montar nuevas particiones
+  ansible.posix.mount:
+    path: '{{ item.value.path }}'
+    src: '{{ item.value.src }}'
+    fstype: '{{ fs_type }}'
+    state: mounted
+  loop: '{{ lv | dict2items}}'

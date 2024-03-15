@@ -1,0 +1,11 @@
+---
+# tasks file for template_aws
+- include: dir.yml
+- include: partition.yml
+- include: pv_vg.yml
+- include: lv.yml
+- include: filesystem.yml
+- include: mount.yml
+- include: bind.yml
+- include: cp.yml
+- include: clean.yml 
