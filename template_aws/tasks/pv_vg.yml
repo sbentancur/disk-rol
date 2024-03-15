@@ -1,5 +1,5 @@
 ---
-- name: Create volume group
+- name: Creacion de volume group
   lvg:
     vg: '{{ vg_name }}'
     pvs: '{{ device }}1'
