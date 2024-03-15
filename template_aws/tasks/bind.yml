@@ -1,5 +1,5 @@
 ---
-- name: Bind de montaje coso
+- name: Bind temporal para copia de archivos
   ansible.posix.mount:
     path: '{{ dir_mnt }}'
     src: /
