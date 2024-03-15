@@ -1,5 +1,5 @@
 ---
-- name: Montar nuevas particiones
+- name: Montaje de nuevas particiones
   ansible.posix.mount:
     path: '{{ item.value.path }}'
     src: '{{ item.value.src }}'
