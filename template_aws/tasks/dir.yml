@@ -1,10 +1,4 @@
 ---
-#- name: Creacion de directorio temporal para archivos del montaje
-#  file:
-#    path: '{{ item.value.path }}'
-#    state: directory
-#loop: '{{ lv | dict2items }}'
-
 - name: Creacion de dir temp para archivos de montaje
   file:
     path: '{{ dir_mnt }}'
