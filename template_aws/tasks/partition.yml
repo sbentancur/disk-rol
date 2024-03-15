@@ -1,5 +1,5 @@
 ---
-- name: Creacion de particion ext4 LVM
+- name: Creacion de particion ext4
   parted:
     device: '{{ device }}'
     number: 1
