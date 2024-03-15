@@ -1,5 +1,5 @@
 ---
-- name: Cambiar fstype de los LV
+- name: Cambio de fstype de los LV
   filesystem:
     fstype: '{{ fs_type }}'
     dev: '{{ item.value.src }}'
